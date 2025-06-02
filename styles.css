@@ -251,6 +251,7 @@ body {
     z-index: 3;
     position: relative;
     margin-top: -7rem;
+    padding: 0 1rem;
 }
 
 .scan-line {
@@ -341,6 +342,7 @@ body {
     opacity: 0.9;
     animation: slideUp 1s ease-out 0.2s both;
     font-weight: 500;
+    line-height: 1.4;
 }
 
 .hero .description {
@@ -348,6 +350,7 @@ body {
     margin-bottom: 2rem;
     opacity: 0.8;
     animation: slideUp 1s ease-out 0.4s both;
+    line-height: 1.6;
 }
 
 @keyframes slideUp {
@@ -420,6 +423,12 @@ body {
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
+}
+
+.section-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .section-title {
@@ -531,8 +540,9 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    max-width: 100%;
 }
 
 /* Products Section */
@@ -1068,22 +1078,201 @@ body {
         font-size: 1rem;
     }
 
+    .hero {
+        height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .hero-content {
+        margin-top: -2rem;
+        padding: 0 1.5rem;
+        text-align: center;
+    }
+
+    .hero-logo {
+        width: 280px;
+        max-width: 70vw;
+        margin-bottom: 1.5rem;
+    }
+
     .hero .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
     }
 
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .hero .description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        padding: 0 1rem;
     }
 
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 280px;
+        max-width: 80vw;
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .section-header p {
+        text-align: justify;
+        padding: 0 0.5rem;
+        margin: 1rem auto 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    /* Services 및 Products 섹션 설명 */
+    .services .section-header p,
+    .products .section-header p,
+    .contact .section-header p {
+        color: rgba(255,255,255,0.9);
+        text-align: justify;
+        padding: 0 0.5rem;
+        margin: 1rem auto 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* 카드 안쪽 설명 정렬 */
+    .card-description,
+    .project-description,
+    .product-description {
+        text-align: justify;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    .service-card .card-description {
+        text-align: justify;
+        line-height: 1.6;
+        font-size: 0.95rem;
+        color: rgba(255,255,255,0.9);
+    }
+
+    /* 카드 제목 중앙 정렬 */
+    .card-title,
+    .project-title,
+    .product-title {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    /* 태그 중앙 정렬 */
+    .project-tags,
+    .product-tags {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* 섹션 간격 조정 */
+    .about,
+    .services,
+    .projects,
+    .contact {
+        padding: 4rem 0;
+    }
+
+    .products {
+        padding: 4rem 0 6rem 0;
+    }
+
+    /* 카드 통일성 */
+    .about-grid,
+    .services-grid,
+    .projects-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 100%;
+    }
+
+    .about-card,
+    .service-card,
+    .project-card,
+    .product-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+    /* Contact 섹션 개선 */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 100%;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-item {
+        justify-content: flex-start;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-item .icon {
+        margin-right: 1rem;
+        flex-shrink: 0;
+    }
+
+    .contact-item div {
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    .contact-item strong {
+        display: block;
+        margin-bottom: 0.3rem;
     }
 
     .project-detail-grid {
@@ -1100,8 +1289,54 @@ body {
         padding: 1.5rem;
     }
 
+    .modal-title {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .modal-subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
     .modal-body {
         padding: 1.5rem;
+        max-height: 65vh;
+    }
+
+    /* 모달 안쪽 설명 정렬 */
+    .modal-body .detail-section p,
+    .modal-body .detail-section li {
+        text-align: justify;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    .modal-body .detail-section h3 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .modal-body .highlight-box p {
+        text-align: justify;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    .modal-body .highlight-box h4 {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .modal-body .spec-table {
+        font-size: 0.9rem;
+    }
+
+    .modal-body .spec-table th,
+    .modal-body .spec-table td {
+        padding: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .scroll-top-btn {
@@ -1112,8 +1347,9 @@ body {
         font-size: 1.2rem;
     }
 
-    .hero-content {
-        margin-top: -4rem;
+    .scroll-indicator {
+        bottom: 1rem;
+        font-size: 0.9rem;
     }
 }
 
